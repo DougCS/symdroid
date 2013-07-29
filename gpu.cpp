@@ -1,2 +1,3 @@
 //Set frameskip to 0,1,2,3...
 int skipCount = 0
+int linesInternal = 0
