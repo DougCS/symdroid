@@ -1,2 +1,2 @@
-#include CPU.cpp
-#include gpu.cpp
+#include "CPU.cpp"
+#include "gpu.cpp"
