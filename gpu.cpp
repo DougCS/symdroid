@@ -1,4 +1,5 @@
 #include "gpu.h"
+#include "font.h"
 
 //Set frameskip to 0,1,2,3...
 int skipCount = 0;
