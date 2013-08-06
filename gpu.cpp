@@ -8,7 +8,8 @@ int linesInterlace = 0;
 bool skipFrame = false;
 bool skipGPU = false;
 
-bool frameLimit = false
+bool frameLimit = false;
+bool show_fps = false;
 
 u8 BLEND_MODE;
 u8 TEXT_MODE;
