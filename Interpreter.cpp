@@ -2,6 +2,6 @@
 #include "gpu.cpp"
 #include "SDpath.py"
 
-int open();
+int openfile();
     #include "filebrowser.py"
     return 0;
