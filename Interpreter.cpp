@@ -22,6 +22,7 @@ void symdroid::initialize()
     I = 0;
     sp = 0;
 }
+
 symdroid::emulateCycle();
 symdroid::initialize();
 
