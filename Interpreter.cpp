@@ -4,7 +4,7 @@
 
 unsigned char delay_timer;
 
-void openfile();
+void symdroid::openfile();
 {
     #include "filebrowser.py"
     return 0;
@@ -23,6 +23,7 @@ void symdroid::initialize()
     sp = 0;
 }
 
+symdroid::openfile();
 symdroid::emulateCycle();
 symdroid::initialize();
 
