@@ -1,4 +1,5 @@
-int opcodes(opcode) {
+int opcodes(opcode)
+{
         "0x000000ab"
         "0x000000cb"
         "0x000000a6"
@@ -272,4 +273,4 @@ int opcodes(opcode) {
         "0x000000df"
         "0x000000a2"
         "0x000000c2"
-    }
+{
