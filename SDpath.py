@@ -5,12 +5,10 @@ def write_SDdata():
     CONFIG_FILE=os.path.join(CONFIG_DIR,'SDsettings.txt')
     if not os.path.isdir(CONFIG_DIR):
         os.makedirs(CONFIG_DIR)
-        CONFIG_FILE=os.path.join(CONFIG_DIR,'SDsettings.txt')
-    value1 = 'man'
-    value2 = 3.15
+        CONFIG_FILE=os.path.join(CONFIG_DIR,'SDData.obb)
+    value1 = '.obb'
     config={}
     config['variable1']= value1
-    config['variable2']= value2
     f=open(CONFIG_FILE,'wt')
     f.write(repr(config))
     f.close()
@@ -23,8 +21,7 @@ def read_SDdata():
             content = f.read()
             config=eval(content)
             f.close()
-            value1=config.get('variable1','')
-            value2=config.get('variable2','')
+            value1=config.get('variable1')
             print value1
             print value2
         except:
