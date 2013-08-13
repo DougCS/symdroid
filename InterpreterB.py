@@ -1,6 +1,5 @@
-#Interpreter rewritten in python fo more stability
 import gpu
-import CPU
+impsort CPU
 import SDpath
 
 delay_timer
