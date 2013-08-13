@@ -8,5 +8,7 @@ bool bTrueColor;
 bool bJit;
 bool bFastMemory;
 
+bool bSaveSettings;
+
 void Load(const char *iniFileName = "symdroid.ini");
 void Save();
