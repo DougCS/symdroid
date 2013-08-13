@@ -1,4 +1,3 @@
-//Complete for version 0.1
 #ifndef NEW_GPU_H
 #define NEW_GPU_H
 
