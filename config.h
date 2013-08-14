@@ -3,6 +3,11 @@ int iSFXVolume;
 int iBGMVolume;
 
 bool bHardwareTransform;
+bool bTrueColor
+
+bool bBufferedRendering
+bool bFrameSkip
+int iSkipCount
 
 bool bJit;
 bool bFastMemory;
