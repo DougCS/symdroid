@@ -273,4 +273,4 @@ int opcodes(opcode)
         "0x000000df"
         "0x000000a2"
         "0x000000c2"
-{
+}
