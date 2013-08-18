@@ -1,17 +1,10 @@
 import os
 
-def write_SDdata():
+def write_symdroidData():
     CONFIG_DIR='e:/symdroid/SDdata'
     CONFIG_FILE=os.path.join(CONFIG_DIR,'SDData.obb')
-    if not os.path.isdir(CONFIG_DIR):
+    if not os.path.isdir(CONFIG_DIR)
         os.makedirs(CONFIG_DIR)
-        CONFIG_FILE=os.path.join(CONFIG_DIR,'SDData.obb')
-    value1 = '.obb'
-    config={}
-    config['variable1']= value1
-    f=open(CONFIG_FILE,'wt')
-    f.write(repr(config))
-    f.close()
 
 def read_SDdata():
     CONFIG_FILE='e:/symdroid/SDdata/SDData.obb'
