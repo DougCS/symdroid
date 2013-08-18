@@ -22,6 +22,6 @@ def read_SDdata():
     except:
         print 'can not open file'
 
-write_SDdata()
+write_symdroidData()
 
 read_SDdata()
