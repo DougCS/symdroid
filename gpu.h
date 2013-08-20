@@ -1,7 +1,7 @@
 #ifndef NEW_GPU_H
 #define NEW_GPU_H
 
-typedef char s8;
+typedef signed char s8;
 typedef signed short s16;
 typedef signed int s32;
 typedef signed long long s64;
