@@ -1,7 +1,8 @@
+#include "missing_classes.h";
 class MenuScreen : public Screen
 {
 public:
-    MenuScreen()
+    MenuScreen();
     void update(InputState &input);
     void render();
     void sendMessage(const char *message, const char *value);
@@ -10,12 +11,12 @@ private:
     int frames_;
 };
 
-class SettingsScreen : public screen
+class SettingsScreen : public Screen
 {
 public:
     void update(InputState &input);
     void render();
-}
+};
 
 class AudioScreen : public Screen
 {
@@ -51,6 +52,6 @@ private:
 
     FileSelectScreenOptions options_;
     UIList list_;
-    std::string currentDirectory_;
-    std::vector<FileInfo> listing_;
+    //std::string currentDirectory_;
+    //std::vector<FileInfo> listing_;
 };

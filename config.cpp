@@ -1,4 +1,4 @@
-#include "config.h"
+#include "config.h";
 
 Config::Config() { }
 Config::~Config() { }
@@ -18,20 +18,21 @@ void Config::Load(const char *iniFileName)
     cpu->Get("Jit", &bJit, true);
     cpu->Get("FastMemory", &bFastMemory, false);
 
-    graphics->Get("HardwareTransform", &bHardwareTransform, true);
+    //graphics->Get("HardwareTransform", &bHardwareTransform, true);
 
 IniFile::Section *sound = iniFile.GetOrCreateSection("Sound");
 sound->Get("Enable", &bEnableSound, false);
 sound->Get("VolumeBGM", &iBGMVolume, 4);
 sound->Get("VolumeSFX", &iSFXVolume, 4);
+}
 
 void Config::Save()
 {
-    if (iniFilename_.size() && g_Config.bSaveSettings) {
-        CleanRecent();
+    if (iniFilename_) { //TODO: && g_Config.bSaveSettings
+        //TODO: CleanRecent();
         IniFile iniFile;
-        if (!iniFile.Load(iniFilename_.c_str())) {
-            ERROR_LOG(LOADER, "Error saving config - can't read ini %s", iniFilename_.c_str());
+        if (!iniFile.Load(iniFilename_)) {
+            ERROR_LOG(LOADER, "Error saving config - can't read ini %s", iniFilename_);
         }
 
     IniFile::Section *cpu = iniFile.GetOrCreateSection("CPU");
@@ -43,11 +44,11 @@ void Config::Save()
     sound->Set("VolumeBGM", iBGMVolume);
     sound->Set("VolumeSFX", iSFXVolume);
 
-    if (!iniFile.Save(iniFilename_.c_str())) {
-        ERROR_LOG(LOADER, "Error saving config - can't write ini %s", iniFilename_.c_str());
+    if (!iniFile.Save(iniFilename_)) {
+        ERROR_LOG(LOADER, "Error saving config - can't write ini %s", iniFilename_);
         return;
     }
-    INFO_LOG(LOADER, "Config saved: %s", iniFilename_.c_str());
+    INFO_LOG(LOADER, "Config saved: %s", iniFilename_);
     } else {
     INFO_LOG(LOADER, "Not saving config");
     }

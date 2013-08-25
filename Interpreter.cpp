@@ -5,27 +5,30 @@
 
 unsigned char delay_timer;
 
-void symdroid::openfile();
-{
-    #include "filebrowser.py"
-    return 0;
+class symdroid {
+	int a;
+public:
+	static void openfile();
+	static void emulateCycle();
+	static void initialize();
+};
+void symdroid::openfile() {
+	#include "filebrowser.py";
 }
 
-void symdroid::emulateCycle()
-{
-    if(delay_timer > 0)
-    --delay_timer;
+void symdroid::emulateCycle() {
+	if (delay_timer > 0)
+		--delay_timer;
 }
 
-void symdroid::initialize()
-{
-    opcode = 0;
-    I = 0;
-    sp = 0;
+void symdroid::initialize() {
+	opcode = 0;
+	int I = 0;
+	int sp = 0;
 }
 
-symdroid::openfile();
-symdroid::emulateCycle();
-symdroid::initialize();
-
-return 0;
+int main() {
+	symdroid::openfile();
+	symdroid::emulateCycle();
+	symdroid::initialize();
+}
