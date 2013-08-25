@@ -14,13 +14,10 @@ def read_SDdata():
             content = f.read()
             config=eval(content)
             f.close()
-            value1=config.get('variable1')
-            print value1
-            print value2
         except:
-            print 'can not read file'
+            print 'Can not read file'
     except:
-        print 'can not open file'
+        print 'Can not open file'
 
 write_symdroidData()
 
