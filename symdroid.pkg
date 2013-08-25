@@ -1,5 +1,4 @@
 ;lines start with ; are comments
-;product ID of belle is not found be me so now it will contain s60 product ID
 &EN
 ;
 ;
@@ -7,9 +6,9 @@
 ;
 ;Will support belle devieces
 ;
-(0x2003A678), 0, 0, 0,{"Series60ProductID"}
+(0x2003A678), 0, 0, 0,{"SymbianBelleDevicesID"}
 ;
 ; Files to install
 
 "interpreter.cpp"          -"!:\system\apps\BboyMUPO
-;more file will be aded
+;more file will be added
