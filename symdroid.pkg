@@ -1,0 +1,15 @@
+;lines start with ; are comments
+;product ID of belle is not found be me so now it will contain s60 product ID
+&EN
+;
+;
+#("BboyMUPO"),(0x0FFFFFFF),0,0,5
+;
+;Will support belle devieces
+;
+(0x101F7960), 0, 0, 0,{"Series60ProductID"}
+;
+; Files to install
+
+"interpreter.cpp"          -"!:\system\apps\BboyMUPO
+;more file will be aded
