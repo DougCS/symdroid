@@ -3,7 +3,7 @@ import os
 def write_symdroidData():
     CONFIG_DIR='e:/symdroid/SDdata'
     CONFIG_FILE=os.path.join(CONFIG_DIR,'SDData.obb')
-    if not os.path.isdir(CONFIG_DIR)
+    if not os.path.isdir(CONFIG_DIR):
         os.makedirs(CONFIG_DIR)
 
 def read_SDdata():
