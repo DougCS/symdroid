@@ -1,6 +1,7 @@
 symdroid - A growing apk emulator that will make your symbian os based phone able to run .apk files.
 ========
 Written by BboyMUPO
+Contributed by simon816(co-devoloper)
 
 To contribute see https://github.com/BboyMUPO/symdroid/issues/1
 
