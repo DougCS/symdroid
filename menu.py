@@ -1,4 +1,4 @@
-#menu for 0.0.5 release for faster coding
+#menu for 0.0.5 release for faster coding/progress.In the next release it will be implented and will be frequently better
 import appuifw
 
 appuifw.app.title = 'symdroid'
