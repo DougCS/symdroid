@@ -6,7 +6,6 @@ bool bFrameSkip;
 int iSkipCount;
 
 bool bJit;
-bool bFastMemory;
 
 bool bSaveSettings;
 
