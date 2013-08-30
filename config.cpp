@@ -16,7 +16,6 @@ void Config::Load(const char *iniFileName)
 
     IniFile::Section *cpu = iniFile.GetOrCreateSection("CPU");
     cpu->Get("Jit", &bJit, true);
-    cpu->Get("FastMemory", &bFastMemory, false);
 
     //graphics->Get("HardwareTransform", &bHardwareTransform, true);
 
@@ -33,12 +32,7 @@ void Config::Save()
 
     IniFile::Section *cpu = iniFile.GetOrCreateSection("CPU");
     cpu->Set("Jit", bJit);
-    cpu->Set("FastMemory", bFastMemory);
 
-    IniFile::Section *sound = iniFile.GetOrCreateSection("Sound");
-    sound->Set("Enable", bEnableSound);
-    sound->Set("VolumeBGM", iBGMVolume);
-    sound->Set("VolumeSFX", iSFXVolume);
 
     if (!iniFile.Save(iniFilename_)) {
         ERROR_LOG(LOADER, "Error saving config - can't write ini %s", iniFilename_);
