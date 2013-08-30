@@ -1,8 +1,6 @@
 #menu for 0.0.5 release for faster coding
 import appuifw
 
-jit = True
-
 menulist = [u"Load file", u"Settings", u"Exit"]
 
 def menu():
