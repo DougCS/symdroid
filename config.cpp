@@ -20,10 +20,6 @@ void Config::Load(const char *iniFileName)
 
     //graphics->Get("HardwareTransform", &bHardwareTransform, true);
 
-IniFile::Section *sound = iniFile.GetOrCreateSection("Sound");
-sound->Get("Enable", &bEnableSound, false);
-sound->Get("VolumeBGM", &iBGMVolume, 4);
-sound->Get("VolumeSFX", &iSFXVolume, 4);
 }
 
 void Config::Save()
