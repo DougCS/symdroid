@@ -1,7 +1,3 @@
-bool bEnableSound;
-int iSFXVolume;
-int iBGMVolume;
-
 bool bHardwareTransform;
 bool bTrueColor;
 
