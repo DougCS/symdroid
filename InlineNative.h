@@ -1,5 +1,5 @@
-#ifndef _DALVIK_INLINENATIVE
-#define _DALVIK_INLINENATIVE
+#ifndef INLINENATIVE
+#define INLINENATIVE
 
 bool dvmInlineNativeStartup(void);
 void dvmInlineNativeShutdown(void);
@@ -8,7 +8,7 @@ typedef bool (*InlineOp4Func)(u4 arg0, u4 arg1, u4 arg2, u4 arg3,
     JValue* pResult);
 
 typedef struct InlineOperation {
-    InlineOp4Func   func;               /* MUST be first entry */
+    InlineOp4Func   func;
     const char*     classDescriptor;
     const char*     methodName;
     const char*     methodSignature;
@@ -53,4 +53,4 @@ INLINE bool dvmPerformInlineOp4Std(u4 arg0, u4 arg1, u4 arg2, u4 arg3,
 bool dvmPerformInlineOp4Dbg(u4 arg0, u4 arg1, u4 arg2, u4 arg3,
     JValue* pResult, int opIndex);
 
-#endif /*_DALVIK_INLINENATIVE*/
+#endif
