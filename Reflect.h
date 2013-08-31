@@ -1,5 +1,5 @@
-#ifndef _DALVIK_REFLECT_REFLECT
-#define _DALVIK_REFLECT_REFLECT
+#ifndef REFLECT
+#define REFLECT
 
 bool dvmReflectStartup(void);
 bool dvmReflectProxyStartup(void);
@@ -76,11 +76,10 @@ typedef struct AnnotationValue {
 
 
 typedef struct {
-    const u1* cursor;                    /* current cursor */
-    u4 elementsLeft;                     /* number of elements left to read */
-    const DexEncodedArray* encodedArray; /* instance being iterated over */
-    u4 size;                             /* number of elements in instance */
-    const ClassObject* clazz;            /* class to resolve with respect to */
+    u4 elementsLeft;
+    const DexEncodedArray* encodedArray;
+    u4 size;
+    const ClassObject* clazz;
 } EncodedArrayIterator;
 
 void dvmEncodedArrayIteratorInitialize(EncodedArrayIterator* iterator,
