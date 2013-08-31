@@ -1,5 +1,5 @@
-#ifndef _DALVIK_VM_LOOP
-#define _DALVIK_VM_LOOP
+#ifndef LOOP
+#define LOOP
 
 #include "Dalvik.h"
 #include "CompilerInternals.h"
