@@ -1,13 +1,13 @@
-#ifndef _DALVIK_INTERP_DEFS
-#define _DALVIK_INTERP_DEFS
+#ifndef DEFS
+#define DEFS
 
 
 typedef enum InterpEntry {
-    kInterpEntryInstr = 0,      // continue to next instruction
-    kInterpEntryReturn = 1,     // jump to method return
-    kInterpEntryThrow = 2,      // jump to exception throw
+    kInterpEntryInstr = 0,
+    kInterpEntryReturn = 1,
+    kInterpEntryThrow = 2,
 #if defined(WITH_JIT)
-    kInterpEntryResume = 3,     // Resume after single-step
+    kInterpEntryResume = 3,
 #endif
 } InterpEntry;
 
@@ -50,34 +50,34 @@ typedef struct InterpState {
     volatile u1*    pDebuggerActive;
     volatile int*   pActiveProfilers;
 
-    InterpEntry entryPoint;             // what to do when we start
-    int         nextMode;               // INTERP_STD, INTERP_DBG
+    InterpEntry entryPoint;
+    int         nextMode;
 
 #if defined(WITH_JIT)
     unsigned char*     pJitProfTable;
     JitState           jitState;
-    const void*        jitResumeNPC;    // Native PC of compiled code
-    const u2*          jitResumeDPC;    // Dalvik PC corresponding to NPC
+    const void*        jitResumeNPC;
+    const u2*          jitResumeDPC;
     int                jitThreshold;
-    unsigned char**    ppJitProfTable; // Used to refresh pJitProfTable
-    int                icRechainCount; // Count down to next rechain request
+    unsigned char**    ppJitProfTable;
+    int                icRechainCount;
 #endif
 
-    bool        debugIsMethodEntry;     // used for method entry event triggers
+    bool        debugIsMethodEntry;
 #if defined(WITH_TRACKREF_CHECKS)
-    int         debugTrackedRefStart;   // tracked refs from prior invocations
+    int         debugTrackedRefStart;
 #endif
 
 #if defined(WITH_JIT)
     struct JitToInterpEntries jitToInterpEntries;
 
     int currTraceRun;
-    int totalTraceLen;        // Number of Dalvik insts in trace
-    const u2* currTraceHead;  // Start of the trace we're building
-    const u2* currRunHead;    // Start of run we're building
-    int currRunLen;           // Length of run in 16-bit words
+    int totalTraceLen;
+    const u2* currTraceHead;
+    const u2* currRunHead;
+    int currRunLen;
     int lastThreshFilter;
-    const u2* lastPC;         // Stage the PC first for the threaded interpreter
+    const u2* lastPC;
     intptr_t threshFilter[JIT_TRACE_THRESH_FILTER_SIZE];
     JitTraceRun trace[MAX_JIT_RUN_LEN];
     double calleeSave[JIT_CALLEE_SAVE_DOUBLE_COUNT];
