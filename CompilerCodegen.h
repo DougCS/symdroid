@@ -1,5 +1,5 @@
-#ifndef _DALVIK_VM_COMPILERCODEGEN_H_
-#define _DALVIK_VM_COMPILERCODEGEN_H_
+#ifndef COMPILERCODEGEN_H_
+#define COMPILERCODEGEN_H_
 
 #include "CompilerIR.h"
 
@@ -32,4 +32,4 @@ int dvmCompilerTargetOptHint(int key);
 
 void dvmCompilerGenMemBarrier(CompilationUnit *cUnit);
 
-#endif /* _DALVIK_VM_COMPILERCODEGEN_H_ */
+#endif
