@@ -1,5 +1,5 @@
-#ifndef _DALVIK_GLOBALS
-#define _DALVIK_GLOBALS
+#ifndef _GLOBALS
+#define GLOBALS
 
 #include <stdarg.h>
 #include <pthread.h>
