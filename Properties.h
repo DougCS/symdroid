@@ -11,4 +11,4 @@ void dvmSetCommandLineProperties(Object* propObj);
 
 char* dvmGetProperty(const char* key);
 
-#endif /*_DALVIK_PROPERTIES*/
+#endif
