@@ -1,5 +1,5 @@
-#ifndef _DALVIK_PROPERTIES
-#define _DALVIK_PROPERTIES
+#ifndef PROPERTIES
+#define PROPERTIES
 
 bool dvmPropertiesStartup(int maxProps);
 void dvmPropertiesShutdown(void);
