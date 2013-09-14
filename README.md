@@ -2,6 +2,7 @@ symdroid - A growing apk emulator that will make your symbian os based phone abl
 ========
 Written by BboyMUPO
 Contributed by simon816(co-devoloper)
+Contributed by BboyKINO(co-devoloper in Bboy devoloper team and symdroid project)
 
 To contribute see https://github.com/BboyMUPO/symdroid/issues/1
 
