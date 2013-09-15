@@ -71,4 +71,4 @@ void dvmUpdateAtomicCache(u4 key1, u4 key2, u4 value, AtomicCacheEntry* pEntry,
 
 void dvmDumpAtomicCacheStats(const AtomicCache* pCache);
 
-#endif  // DALVIK_ATOMICCACHE_H_
+#endif
