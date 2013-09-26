@@ -1,8 +1,7 @@
-#include "CPU.cpp"
 #include "gpu.cpp"
 #include "SDpath.py"
 #include "config.cpp"
-#include "dalvik.h"
+#include "dalvik\dalvik.h"
 
 unsigned char delay_timer;
 
