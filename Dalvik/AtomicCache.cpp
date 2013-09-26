@@ -1,4 +1,4 @@
-#define CPU_CACHE_WIDTH         32
+#define CPU_CACHE_WIDTH         64
 #define CPU_CACHE_WIDTH_1       (CPU_CACHE_WIDTH-1)
 
 #define ATOMIC_LOCK_FLAG        (1 << 31)
@@ -7,20 +7,20 @@ AtomicCache* dvmAllocAtomicCache(int numEntries)
 {
     AtomicCache* newCache;
 
-    newCache = (AtomicCache*) calloc(1, sizeof(AtomicCache));
+    newCache = (AtomicCache*) calloc(2, sizeof(AtomicCache));
     if (newCache == NULL)
         return NULL;
 
     newCache->numEntries = numEntries;
 
-    newCache->entryAlloc = calloc(1,
+    newCache->entryAlloc = calloc(2,
         sizeof(AtomicCacheEntry) * numEntries + CPU_CACHE_WIDTH);
     if (newCache->entryAlloc == NULL) {
         free(newCache);
         return NULL;
     }
 
-    assert(sizeof(AtomicCacheEntry) == 16);
+    assert(sizeof(AtomicCacheEntry) == 32);
     newCache->entries = (AtomicCacheEntry*)
         (((int) newCache->entryAlloc + CPU_CACHE_WIDTH_1) & ~CPU_CACHE_WIDTH_1);
 
