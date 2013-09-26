@@ -2,6 +2,7 @@
 #include "SDpath.py"
 #include "config.cpp"
 #include "dalvik\dalvik.h"
+#include "GLES.cpp"
 
 unsigned char delay_timer;
 
