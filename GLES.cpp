@@ -1,4 +1,7 @@
 //Thanks to project ppsspp.Modifications still have to be done on this file
+
+#include "GLES.h"
+
 enum {
 	FLAG_FLUSHBEFORE = 1,
 	FLAG_FLUSHBEFOREONCHANGE = 2,
