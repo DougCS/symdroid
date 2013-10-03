@@ -1,8 +1,6 @@
 #ifndef OPCODES_H_
 #define OPCODES_H_
 
-#include "dalvik/DexFile.h"
-
 #define kMaxOpcodeValue 0xffff
 #define kNumPackedOpcodes 0x100
 
