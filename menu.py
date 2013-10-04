@@ -9,11 +9,10 @@ def menu():
     main = appuifw.selection_list(menulist)
     
     if main == 0:
-        import filebrowser #will be compiled into .pyc to can be imported
+        print"Not avilible yet" //import filebrowser #will be compiled into .pyc to can be imported
         
     if main == 1:
-        settingsmenulist = [u"System", u"Others"]
-        settingsmenu = appuifw.selection_list(settingsmenulist)
+        print"Not avilible yet"
         
     if main == 2:
         appuifw.app.set_exit()
