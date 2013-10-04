@@ -9,7 +9,7 @@ def menu():
     main = appuifw.selection_list(menulist)
     
     if main == 0:
-        print"Not avilible yet" //import filebrowser #will be compiled into .pyc to can be imported
+        print"Not avilible yet"
         
     if main == 1:
         print"Not avilible yet"
