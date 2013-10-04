@@ -15,21 +15,6 @@ def menu():
         settingsmenulist = [u"System", u"Others"]
         settingsmenu = appuifw.selection_list(settingsmenulist)
         
-        if settingsmenu == 0:
-            systemlist = u"Jit"
-            systemsettings = appuifw.selection_list(systemlist)
-            
-            if systemsettings == 0:
-                jitlist = [u"jit on", u"jit off"]
-                jitsettings = appuifw.selection_list(jitlist)
-                
-                if jitsettings == 0:
-                    global jit
-                    jit = True
-                    
-                if jitsettings == 1:
-                    global jit
-                    jit = False
-            
     if main == 2:
         appuifw.app.set_exit()
+        //I deleted some lines because of it's bug
