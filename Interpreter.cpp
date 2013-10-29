@@ -1,7 +1,7 @@
 #include "gpu.cpp"
 #include "SDpath.py"
 #include "config.cpp"
-#include "dalvik\dalvik.h"
+#include "dalvik\Dalvik.h"
 #include "GLES.cpp"
 
 unsigned char delay_timer;
@@ -33,3 +33,5 @@ int main() {
 	symdroid::emulateCycle();
 	symdroid::initialize();
 }
+
+return 0;
