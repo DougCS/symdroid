@@ -1,11 +1,9 @@
 #ifndef DALVIK_JARFILE_H_
 #define DALVIK_JARFILE_H_
 
-//Pray out the dex file from a jar
-
 struct JarFile {
     ZipArchive  archive;
-    //MemMapping  map;
+    MemMapping  map;
     char*       cacheFileName;
     DvmDex*     pDvmDex;
 };
