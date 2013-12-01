@@ -1,7 +1,6 @@
 #include "STFileManagerEntry.h"
 #include "STFile.h"
 #include "STLogger.h"
-#include "STTorrent.h"
 
 _LIT(KLitOpeningFileFailed, "Open/replace failed");
 
@@ -17,27 +16,27 @@ CSTFileManagerEntry::~CSTFileManagerEntry()
 	iFileHandle.Close();
 }
 
-CSTFileManagerEntry* CSTFileManagerEntry::NewLC(RFs& aFs, CSTTorrent& aTorrent, CSTFile& aFile)
+CSTFileManagerEntry* CSTFileManagerEntry::NewLC(RFs& aFs, CSTData& aData, CSTFile& aFile)
 {
 	CSTFileManagerEntry* self = new (ELeave)CSTFileManagerEntry(aFile);
 	CleanupStack::PushL(self);
-	self->ConstructL(aFs, aTorrent);
+	self->ConstructL(aFs, aData);
 	return self;
 }
 
-CSTFileManagerEntry* CSTFileManagerEntry::NewL(RFs& aFs, CSTTorrent& aTorrent, CSTFile& aFile)
+CSTFileManagerEntry* CSTFileManagerEntry::NewL(RFs& aFs, CSTData& aData, CSTFile& aFile)
 {
-	CSTFileManagerEntry* self = CSTFileManagerEntry::NewLC(aFs, aTorrent, aFile);
+	CSTFileManagerEntry* self = CSTFileManagerEntry::NewLC(aFs, aData, aFile);
 	CleanupStack::Pop();
 	return self;
 }
 
-void CSTFileManagerEntry::ConstructL(RFs& aFs, CSTTorrent& /*aTorrent*/)
+void CSTFileManagerEntry::ConstructL(RFs& aFs, CSTData& aData)
 {
-	/*HBufC* fileName = HBufC::NewLC(aTorrent.Path().Length() + iFile.Path().Length());
+	HBufC* fileName = HBufC::NewLC(aData.Path().Length() + iFile.Path().Length());
 	TPtr fileNamePtr(fileName->Des());
-	fileNamePtr.Copy(aTorrent.Path());
-	fileNamePtr.Append(iFile.Path()); */
+	fileNamePtr.Copy(aData.Path());
+	fileNamePtr.Append(iFile.Path());
 
 	TPtrC fileNamePtr = iFile.Path();
 	aFs.MkDirAll(iFile.Path());
@@ -51,7 +50,7 @@ void CSTFileManagerEntry::ConstructL(RFs& aFs, CSTTorrent& /*aTorrent*/)
 		if (iFileHandle.Replace(aFs, fileNamePtr, EFileWrite|EFileShareAny) != KErrNone)
 		{
 			LOG->WriteLineL(_L("[File] Create/replace failed"));
-			User::Leave(0);	// TODO replace
+			User::Leave(0);
 		}
 		else
 			LOG->WriteLineL(_L("[File] File created"));
