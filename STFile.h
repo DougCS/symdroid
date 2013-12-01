@@ -1,5 +1,5 @@
-#ifndef SYMTORRENT_STFILE_H
-#define SYMTORRENT_STFILE_H
+#ifndef STFILE_H
+#define STFILE_H
 
 #include <e32base.h>
 #include <f32file.h>
