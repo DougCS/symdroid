@@ -1,6 +1,7 @@
 #include "STFileManagerEntry.h"
 #include "STFile.h"
 #include "STLogger.h"
+#include "Format.h"
 
 _LIT(KLitOpeningFileFailed, "Open/replace failed");
 
