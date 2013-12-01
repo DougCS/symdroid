@@ -15,8 +15,6 @@ void symdroid::openfile() {
 	#include "Filemanager.cpp";
 }
 
-}
-
 void symdroid::initialize() {
 	opcode = 0;
 	int sp = 0;
