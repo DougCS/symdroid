@@ -5,7 +5,7 @@
 #include <f32file.h>
 #include "STDefs.h"
 
-class CSTTorrent;
+class CSTData;
 class CSTFile;
 
 class CSTFile : public CBase
